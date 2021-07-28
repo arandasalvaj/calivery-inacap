@@ -50,6 +50,7 @@ Route::group(['middleware' => ['role:Seller|Store']], function () {
     Route::post('tienda/horario/almacenar', [App\Http\Controllers\StoreTimeController::class, 'store'])->name('tienda.horario.store');
     Route::get('tienda/horario/mishorarios', [App\Http\Controllers\StoreTimeController::class, 'index'])->name('tienda.horario.index');
     Route::get('tienda/horario/ver', [App\Http\Controllers\StoreTimeController::class, 'showIndex'])->name('tienda.horario.show');
+    Route::post('cargar/categoria', [App\Http\Controllers\CategoryController::class, 'index'])->name('tienda.categoria');
     
 });
 Route::get('tienda/estadistica/grafico1', [App\Http\Controllers\StoreTimeController::class, 'totalOrdenes'])->name('tienda.estadisticas.show');
