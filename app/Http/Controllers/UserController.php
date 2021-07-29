@@ -99,4 +99,17 @@ class UserController extends Controller
         User::destroy($id);
         return view('Cliente.homeCliente');
     }
+
+
+    public function showRegistrationFormS()
+    {
+        return view('auth.loginRegisterVendedor.register');
+    }
+
+    public function showRegistrationFormD()
+    {
+        return view('auth.loginRegisterRepartidor.register');
+    }
+
+
 }
