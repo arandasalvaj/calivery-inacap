@@ -32,8 +32,9 @@ Auth::routes();
 //VISITANTE
 Route::get('/registro-vendedor', [App\Http\Controllers\UserController::class, 'showRegistrationFormD'])->name('registerD');
 Route::get('/registro-vendedor', [App\Http\Controllers\UserController::class, 'showRegistrationFormS'])->name('registerS');
-Route::post('/registro-vendedor', [App\Http\Controllers\Auth\RegisterController::class, 'registerSeller'])->name('registerS');
-Route::post('/registro-repartidor', [App\Http\Controllers\Auth\RegisterController::class, 'registerDelivery'])->name('registerD');
+
+Route::post('/registro-vendedor', [App\Http\Controllers\Auth\RegisterController::class, 'registerSeller'])->name('registerSS');
+Route::post('/registro-repartidor', [App\Http\Controllers\Auth\RegisterController::class, 'registerDelivery'])->name('registerDD');
 
 //TIENDA O VENDEDOR
 Route::group(['middleware' => ['role:Seller|Store']], function () {
