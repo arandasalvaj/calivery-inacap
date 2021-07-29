@@ -30,8 +30,8 @@ Route::get('/', function () {
 Auth::routes();
 
 //VISITANTE
-Route::get('/registro-repartidor', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationFormD'])->name('registerD');
-Route::get('/registro-vendedor', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationFormS'])->name('registerS');
+Route::get('/registro-repartidor', [App\Http\Controllers\Auth\RegisterController::class, 'registerSeller'])->name('registerD');
+Route::get('/registro-vendedor', [App\Http\Controllers\Auth\RegisterController::class, 'registerDelivery'])->name('registerS');
 Route::post('/registro-vendedor', [App\Http\Controllers\Auth\RegisterController::class, 'registerSeller'])->name('registerS');
 Route::post('/registro-repartidor', [App\Http\Controllers\Auth\RegisterController::class, 'registerDelivery'])->name('registerD');
 

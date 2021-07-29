@@ -36,7 +36,6 @@ class RegisterController extends Controller
      * @var string
      */
 
-
     //1-Customer, 2-Seller, 3-Store, 4-Delivery
     /**
      * Create a new controller instance.
