@@ -13,7 +13,7 @@
                         <h3 class="mb-4">Registro Vendedor</h3>
                     </div>
                 </div>
-                    <form method="POST" action="{{ route('registerS') }}">
+                    <form method="POST" action="{{ route('registerSS') }}">
                         @csrf
                         <div class="form-group mb-3">
                             <label class="label" for="name">Rut</label>
